@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 :root {
-    --main-color:#3498db;
-    --main-color-darker:#2980b9;
-    --white:#ecf0f1;
-    --gray:#cdd4d6;
+    --blue-lighter:#7ED0F8;
+    --blue:#4085C8;
+    --blue-darker:#114DA5;
+    --blue-gradient-1:linear-gradient(90deg, rgba(126,208,248,1) 0%, rgba(64,133,200,1) 35%, rgba(17,77,165,1) 100%);
+    --blue-gradient-2:linear-gradient(125deg, #00aefb 5%, rgba(126,208,248,1) 90%);
+    --white:#ECF0F8;
+    --gray:#E4E7E8;
 }
 
 
@@ -20,4 +23,155 @@
 body {
     font-family:'Open Sans', Arial, Helvetica, sans-serif;
     line-height: 1.2;
+    background:var(--white);
+}
+
+
+.app {
+    position: relative;
+}
+
+.app__header {
+    position: relative;
+    padding:1.5rem;
+    background: rgb(126,208,248);
+    background: var(--blue-gradient-1);
+    color:#fff;
+
+}
+
+.input-container {
+    border-bottom:1px solid #fff;
+    min-width:10rem;
+    width:20rem;
+    display:flex;
+    position: relative;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.search-icon-container {
+    font-size:1rem;
+    margin-right:0.5rem;
+}
+
+.search-food-input {
+    background:none;
+    border:none;
+    outline: none;
+    margin-bottom:0.25rem;
+    font-size:1rem;
+    min-width:10rem;
+    width:18.5rem;
+    caret-color: #fff;
+}
+
+input, select, textarea {
+    color: #fff;
+}
+/*remove the default X that appears in the input box in some browsers*/
+    /*IE*/
+    input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+    input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+    /*chrome*/
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+
+.search-food-input::placeholder {
+    font-family:'Open Sans', Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size:0.9rem;
+}
+
+
+.food-list {
+    list-style-type: none;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+}
+
+.food {
+    background:rgb(255, 255, 255);
+    margin:1rem;
+    text-align: center;
+    width:350px;
+    border-radius:5px;
+    filter:drop-shadow(3px 3px 6px #0d151a17);
+    transition: transform ease 0.25s;
+}
+
+.food:hover {
+    filter:drop-shadow(3px 3px 6px #0d151a25);
+    transform: scale(1.025);
+}
+
+.food__image {
+    max-width:100%;
+    object-fit: contain;
+    object-position: center;
+    /* padding:0.25rem; */
+    image-rendering:optimizeSpeed;
+
+}
+
+.food__header {
+    color:var(--blue-lighter);
+    font-weight: 700;
+}
+
+
+.food__more-info {
+    display:flex;
+    justify-content: center;
+    margin:0.75rem 0;
+    letter-spacing: 0.5px;
+}
+
+.food__serving,
+.food__time {
+    display:flex;
+    justify-content: center;
+}
+
+.food-timer-icon {
+    margin-right:0.15rem;
+}
+
+.food__time {
+    margin-right:0.5rem;
+}
+
+.food__description {
+    line-height:1.6;
+    margin:0.75rem 0 1rem 0;
+}
+
+.food__full-recipe-btn {
+    margin-bottom:1.75rem;
+    font-weight: 600;
+    border:none;
+    background:var(--blue-gradient-2);
+    padding:1rem 2rem;
+    border-radius:50px;
+    color:#fff;
+    font-size:0.9rem;
+    /* letter-spacing: 0.5px; */
+    /* filter:drop-shadow(3px 3px 6px #cacaca8a); */
+
+    transition: opacity ease 0.15s;
+}
+
+.food__full-recipe-btn:hover {
+    cursor: pointer;
+    opacity:0.8;
+}
+
+.food__full-recipe-btn:active {
+    opacity:1;
 }
