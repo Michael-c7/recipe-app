@@ -15,7 +15,77 @@
     </head>
     <body>
         <div class="app">
-            <header class="app__header">
+
+            <div class="food-info-popup-container">
+                <section class="food-info-popup">
+                    <!-- <button class="food-info-popup__close-btn">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button> -->
+                    <ul class="food-info-popup__icons">
+                        <li class="food-info-popup__icon summary-icon">
+                            <i class="fa fa-commenting" aria-hidden="true"></i>
+                        </li>
+                        <li class="food-info-popup__icon ingredients-icon">
+                            <i class="fa fa-cutlery" aria-hidden="true"></i>
+                        </li>
+                        <li class="food-info-popup__icon directions-icon">
+                            <i class="fa fa-map" aria-hidden="true"></i>
+                        </li>
+                        <li class="food-info-popup__icon diet-icon">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+
+
+                    <div>
+                        <h2 class="food-info-popup__header">Chocolate cake</h2>
+                        <div class="food__more-info">
+                            <div class="food__time">
+                                <i class="fa fa-clock-o food-timer-icon" aria-hidden="true"></i>
+                                <div class="food__time__text">60min</div>
+                            </div>
+                            <div class="food__serving">
+                                <div class="food__serving__text">4 servings</div>
+                            </div>
+                        </div>
+
+                        <ul class="food-info-popup__info">
+                            <li class="food-info-popup__info-item summary-info">
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima atque minus nobis, animi totam dolores perspiciatis dolor rem officiis harum illo ea dolorem iure molestiae aut. Sapiente mollitia sequi a.
+                                </p>
+                            </li>
+                            <li class="food-info-popup__info-item ingredients-info">
+                                <ul>
+                                    <li>1. ingredient 1</li>
+                                    <li>2. ingredient 2</li>
+                                    <li>2. ingredient 3</li>
+                                </ul>
+                            </li>
+                            <li class="food-info-popup__info-item directions-info">
+                                <ul>
+                                    <li>1. direction 1</li>
+                                    <li>2. direction 2</li>
+                                    <li>2. direction 3</li>
+                                </ul>
+                            </li>
+                            <li class="food-info-popup__info-item diet-info">
+                                <h3>this diet is...</h3>
+                                <ul>
+                                    <li>1. gluten free</li>
+                                    <li>2. dairy free</li>
+                                    <li>3. lacto ovo veggie</li>
+                                    <li>4. vegan</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+
+
+            <header class="app__header blur">
                 <div class="input-container">
                     <div class="icon-container search-icon-container">
                         <i class="fa fa-search" aria-hidden="true"></i>
@@ -26,65 +96,32 @@
                 </div>
             </header>
 
-            <ul class="food-list">
-                <li class="food">
-                    <img class="food__image" src="./images/cake-test-image.jpg" alt="food image">
-                    <h2 class="food__header">chocolate cake</h2>
-                    <div class="food__more-info">
-                        <div class="food__time">
-                            <i class="fa fa-clock-o food-timer-icon" aria-hidden="true"></i>
-                            <div class="food__time__text">60min</div>
+            
+
+            <main class="app__main-content blur">
+                <ul class="food-list">
+                    <li class="food">
+                        <img class="food__image" src="./images/cake-test-image.jpg" alt="food image">
+                        <h2 class="food__header">chocolate cake</h2>
+                        <div class="food__more-info">
+                            <div class="food__time">
+                                <i class="fa fa-clock-o food-timer-icon" aria-hidden="true"></i>
+                                <div class="food__time__text">60min</div>
+                            </div>
+    
+                            <div class="food__serving">
+                                <div class="food__serving__text">4 servings</div>
+                            </div>
                         </div>
-
-                        <div class="food__serving">
-                            <div class="food__serving__text">4 servings</div>
-                        </div>
-                    </div>
-
-                    <p class="food__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit ipsum dolor sit amet consectetur adipisicing elit ipsum dolor sit amet consectetur adipisicing elit ipsum dolor sit amet consectetur adipisicing elit...</p>
-                    <button class="food__full-recipe-btn">Full Recipe</button>
-                </li>
+    
+                        <p class="food__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit ipsum dolor sit amet consectetur adipisicing elit ipsum dolor sit amet consectetur adipisicing elit ipsum dolor sit amet consectetur adipisicing elit...</p>
+                        <button class="food__full-recipe-btn">Full Recipe</button>
+                    </li>
+                </ul>
 
 
-
-
-                <li class="food">
-                    <img class="food__image" src="./images/cake-test-image.jpg" alt="food image">
-                    <h2 class="food__header">chocolate cake</h2>
-                    <div class="food__more-info">
-                        <div class="food__time">
-                            <i class="fa fa-clock-o food-timer-icon" aria-hidden="true"></i>
-                            <div class="food__time__text">60min</div>
-                        </div>
-
-                        <div class="food__serving">
-                            <div class="food__serving__text">4 servings</div>
-                        </div>
-                    </div>
-
-                    <p class="food__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit ipsum dolor sit amet consectetur adipisicing elit ipsum dolor sit amet consectetur adipisicing elit ipsum dolor sit amet consectetur adipisicing elit...</p>
-                    <button class="food__full-recipe-btn">Full Recipe</button>
-                </li>
-
-
-                <li class="food">
-                    <img class="food__image" src="./images/cake-test-image.jpg" alt="food image">
-                    <h2 class="food__header">chocolate cake</h2>
-                    <div class="food__more-info">
-                        <div class="food__time">
-                            <i class="fa fa-clock-o food-timer-icon" aria-hidden="true"></i>
-                            <div class="food__time__text">60min</div>
-                        </div>
-
-                        <div class="food__serving">
-                            <div class="food__serving__text">4 servings</div>
-                        </div>
-                    </div>
-
-                    <p class="food__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit ipsum dolor sit amet consectetur adipisicing elit ipsum dolor sit amet consectetur adipisicing elit ipsum dolor sit amet consectetur adipisicing elit...</p>
-                    <button class="food__full-recipe-btn">Full Recipe</button>
-                </li>
-            </ul>
+                
+            </main>
         </div>
 
         <script src="./app.js" type="module"></script>

@@ -26,6 +26,10 @@ body {
     background:var(--white);
 }
 
+ul {
+    list-style-type: none;
+}
+
 
 .app {
     position: relative;
@@ -174,4 +178,50 @@ input, select, textarea {
 
 .food__full-recipe-btn:active {
     opacity:1;
+}
+
+
+
+
+
+
+
+
+
+
+/*food-info-popup*/
+.food-info-popup-container {
+    background:rgba(0, 0, 0, 0.247);
+    position: absolute;
+    top:0;
+    width:100vw;
+    height:100vh;
+    z-index:100;
+}
+
+.food-info-popup {
+    z-index:999;
+    position: relative;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    background:var(--white);
+    width:90%;
+    display:grid;
+    grid-template-columns:0.25fr 1fr;
+}
+
+.food-info-popup__icons {
+    /*do display grid  here*/
+    background:gray;
+}
+
+/*misc*/
+/*
+When the popup pops up apply this class to...
+    - app__main-content
+    - app__header
+*/
+.blur {
+    filter:blur(10px);
 }
