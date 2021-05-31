@@ -78,6 +78,7 @@ STEPS
 - get card data
 - render card card / popup in the DOM
 - get the full recipe btn & close btn working
+- get the popups tabs working
 */
 
 
