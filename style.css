@@ -197,6 +197,8 @@ input, select, textarea {
     width:100vw;
     height:100vh;
     z-index:100;
+
+    display:none;
 }
 
 .food-info-section {
@@ -205,7 +207,7 @@ input, select, textarea {
 }
 
 .food-info-popup {
-    z-index:999;
+    z-index:-999;
     position: relative;
     left:50%;
     top:50%;
@@ -213,7 +215,7 @@ input, select, textarea {
     background:var(--white);
     width:90%;
     height:20rem;
-    display:grid;
+    display:none;
     grid-template-columns:5rem 1fr;
     text-align: center;
 }
@@ -291,11 +293,26 @@ When the popup pops up apply this class to...
     filter:blur(10px);
 }
 
+/*apply to...
+    - food-info-popup-container
+    - food-info-popup
+*/
+.show-popup {
+    z-index:999;
+    display:grid;
+}
 
+/*
+Apply to...
+    - food-info-popup__icon
+*/
 .current-tab {
     background:rgb(26, 26, 26);
 }
 
+/*apply to...
+    - food-info-popup__info-item
+*/
 .current-tab-text {
     display:block;
 }
